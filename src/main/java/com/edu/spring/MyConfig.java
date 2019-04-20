@@ -2,6 +2,7 @@ package com.edu.spring;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 
 /**
@@ -38,14 +39,21 @@ public class MyConfig {
         return new Cat();
     }
 
-    @Bean(initMethod = "myInit", destroyMethod = "myDestory")
-    public Dog createDog(){
-        return new Dog();
-    }
 
     @Bean
     public Fish createFish(){
         return new Fish();
+    }
+
+    @Bean
+    public User createUser(){
+        return new User();
+    }
+
+    @Bean
+    @Primary
+    public UserDao createUserDao(){
+        return new UserDao();
     }
 
 }
