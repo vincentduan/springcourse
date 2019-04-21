@@ -27,6 +27,7 @@ public class App {
         System.out.println(context.getBean(UserService.class));
         System.out.println(context.getBean(UserController.class));
         User user = context.getBean("myUser", User.class);
+        System.out.println("===");
         System.out.println(user);
         context.close();
     }
