@@ -11,4 +11,9 @@ public class MyConfig {
         return new User();
     }
 
+    @Bean
+    public User createUser2(){
+        return new User();
+    }
+
 }
