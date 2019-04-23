@@ -1,19 +1,19 @@
 package com.edu.spring;
 
+import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
+import java.util.ArrayList;
+import java.util.List;
+
+@SpringBootConfiguration
 public class MyConfig {
 
-    @Bean(initMethod = "init")
-    public User createUser(){
-        return new User();
-    }
-
     @Bean
-    public User createUser2(){
-        return new User();
+    public List<String> createList(){
+        ArrayList arrayList = new ArrayList();
+        arrayList.add("a");
+        return arrayList;
     }
 
 }
