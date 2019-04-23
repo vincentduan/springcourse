@@ -8,9 +8,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class App {
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(App.class, args);
-        context.getBean(UserConfig.class).show();
-        context.getBean(JdbcConfig.class).show();
-        context.getBean(DataSourceProperties.class).show();
+        System.out.println(context.getBean(TomcatProperties.class));
+        System.out.println(context.getEnvironment().getProperty("springboot.name"));
         context.close();
     }
 
