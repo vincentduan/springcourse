@@ -7,13 +7,10 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class App {
     public static void main(String[] args) {
-        SpringApplication application = new SpringApplication(App.class);
-        application.setAdditionalProfiles("dev");
-//        application.setAdditionalProfiles("test");
-        ConfigurableApplicationContext context = application.run(args);
-        System.out.println(context.getBean(TomcatProperties.class));
-        System.out.println(context.getEnvironment().getProperty("springboot.name"));
-        System.out.println(context.getEnvironment().getProperty("jdbc.url"));
+        ConfigurableApplicationContext context = SpringApplication.run(App.class, args);
+        System.out.println(System.getProperty("file.encoding"));
+        System.out.println(context.getBeansOfType(EncodingConvert.class));
+        System.out.println(context.getBeansOfType(Runnable.class));
         context.close();
     }
 
