@@ -1,4 +1,4 @@
 package com.edu.spring;
 
-public class User {
+public class Role {
 }
