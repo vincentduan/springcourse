@@ -2,10 +2,10 @@ package com.edu.spring.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration;
 
-//@ServletComponentScan
-@SpringBootApplication
+
+@SpringBootApplication(exclude = ErrorMvcAutoConfiguration.class)
 public class App {
 
     public static void main(String[] args) {
