@@ -15,6 +15,8 @@ public class RedisAutoConfiguration {
     @Bean
     @ConditionalOnMissingBean
     public Jedis jedis(RedisProperties redisProperties){
-        return new Jedis(redisProperties.getHost(), redisProperties.getPort());
+        Jedis jedis = new Jedis(redisProperties.getHost(), redisProperties.getPort());
+        System.out.println("springbourse bean" + jedis);
+        return jedis;
     }
 }
