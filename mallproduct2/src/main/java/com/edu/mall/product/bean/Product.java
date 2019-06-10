@@ -1,4 +1,4 @@
-package bean;
+package com.edu.mall.product.bean;
 
 import java.sql.Timestamp;
 

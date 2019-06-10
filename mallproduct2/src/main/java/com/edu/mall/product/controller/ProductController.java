@@ -49,7 +49,7 @@ public class ProductController {
 
     @GetMapping("/soa/address")
     public Object version() {
-        return new Response("200", "OK", "127.0.0.1:8080");
+        return new Response("200", "OK", "127.0.0.1:9090");
     }
 
 }
